@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@1&family=Lato:wght@100&family=Noto+Sans+Arabic:wght@100;300&display=swap"
+        rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <title>divar</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Abril Fatface', cursive;
+            font-family: 'DM Serif Display', serif;
+            font-family: 'Lato', sans-serif;
+            font-family: 'Noto Sans Arabic', sans-serif;
+
+        }
+
+        .app {
+            justify-content: space-between;
+        }
+
+        .header {
+            align-items: center;
+            box-shadow: 0 0 0.2px 0.2px grey;
+            display: flex;
+            height: 70px;
+            justify-content: space-between;
+            padding: 6px 10px;
+            width: 100%;
+        }
+
+        .p1 {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px 10px;
+
+        }
+
+        .p1>span {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            transition: .3s;
+            cursor: pointer;
+            font-weight: bold;
+            color: rgba(135, 135, 135, 0.971)
+        }
+
+        .p1>span:not(:first-child):hover {
+            background-color: rgba(175, 171, 171, 0.971);
+            color: rgb(5, 5, 5);
+
+        }
+
+        .p1>span:first-child {
+            background-color: #be3737;
+            color: #fff;
+        }
+
+        .p1>span:first-child:hover {
+            background-color: #cc5454;
+            color: rgb(255, 255, 255);
+        }
+
+        .serch {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* background-color: cornflowerblue; */
+        }
+
+        .serch>input {
+            width: 100%;
+
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: rgba(209, 208, 208, 0.684);
+            padding: 5px 10px;
+            direction: rtl;
+        }
+
+        .location {
+            width: 15%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            /* background-color: aqua; */
+        }
+
+        .location>span {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            transition: .3s;
+            cursor: pointer;
+            font-weight: bold;
+            color: rgba(135, 135, 135, 0.971);
+            margin: 6px;
+
+
+        }
+
+        .location>span:hover {
+            background-color: rgba(175, 171, 171, 0.971);
+            color: black;
+        }
+
+        figure {
+            width: 5%;
+            height: 100%;
+            display: flex;
+
+
+        }
+
+        .Header>figure>img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        /* ............................end header............................... */
+        main {
+            width: 80%;
+            height: fit-content;
+            padding: 20px;
+        }
+
+        main>strong {
+            width: 100%;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid grey;
+            font-size: 14px;
+            color: gray;
+        }
+
+        main>section {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            margin-top: 15px;
+            justify-content: space-between;
+            align-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        main>section>article {
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 6px;
+            width: 33%;
+            padding: 10px;
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+
+
+        }
+
+        main>section>article>figure {
+            width: 35%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        main>section>article>figure>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .title {
+            width: 65%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-between;
+            padding: 5px;
+
+        }
+
+        .title>h3 {
+            width: 100%;
+            direction: rtl;
+            padding: 0 5px 40px 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .title>div,
+        address {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            direction: rtl;
+            font-size: 16px;
+            font-weight: 600;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section class="app col-12  d-flex">
+            <section class="header col-12 border d-flex">
+                <div class="p1   d-flex">
+                    <span>ثبت آگهی</span>
+                    <span>پشتیبانی </span>
+                    <span>چت</span>
+                    <span> دیوار من</span>
+                </div>
+                <div class="serch   d-flex">
+                    <input type="text" placeholder="جستوجو در همه ی دسته ها">
+                </div>
+                <div class="location ">
+                    <span>تهران</span>
+                    <span>دسته ها</span>
+                </div>
+                <figure class="col-1 ">
+                    <img src="img/download.svg" alt="">
+                </figure>
+
+            </section>
+
+        </section>
+    </div>
+    <!-- ..............................................end header -->
+    <main>
+        <strong>دیوار تهران:‌ انواع آگهی‌ها و خدمات در تهران</strong>
+        <section>
+            <article>
+                <figure id="demo">
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="img/wYu1I8Bg.jpg" alt="">
+                </figure>
+                <section class="title">
+                    <h3>اجاره امیرآباد آزادگان ۲خواب</h3>
+                    <div>150.000</div>
+                    <address>یوسف آباد</address>
+                </section>
+            </article>
+        </section>
+    </main>
+
+</body>
+<script>
+
+    fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then((data) => {
+            console.log(data)
+            data.map((val) => {
+
+                const temp = new store(val.image, val.description, val.price, val.category)
+                document.getElementById('demo').innerHTML+=temp.fullstore()
+
+            })
+        })
+
+
+    class store {
+        constructor(img, title, price, address) {
+            debugger
+            this.img = img
+            this.title = title
+            this.price = price
+            this.address = address
+
+        }
+
+        Top() {
+
+            let top = document.getElementsByName('figure')[0]
+
+            top.innerHTML =
+                `<img src = "${this.img}" >
+                    `
+
+            return top
+        }
+
+        Middle() {
+            let middle = document.getElementsByClassName('title')[0]
+
+            middle.innerHTML = `
+             <h3>${this.title}</h3>
+                `
+
+            return middle
+        }
+        Bottun() {
+            let Bottun = document.getElementsByClassName('title')[0]
+            Bottun.innerHTML = `
+             <div> ${this.price}</div>
+            <address> ${this.address}</address>
+                `
+            return Bottun
+        }
+        fullstore() {
+
+            let fullstore = document.querySelector('main>section')
+
+            fullstore.innerHTML = `
+            <article>
+             ${this.Top()}
+             ${this.Middle()}
+             ${this.Bottun()}
+            </article>
+            
+            `
+
+            return fullstore
+        }
+
+    }
+
+
+
+
+</script>
+
+</html>
